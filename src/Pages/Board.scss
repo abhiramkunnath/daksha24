@@ -1,7 +1,8 @@
 .board--box {
   width: 100vw;
-  display: grid;
-  place-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   color: white;
   font-size: 1.2rem;
   height: 82vh;

@@ -42,10 +42,11 @@ function Board() {
           })
         );
         setIsLoading(false);
+        setLastUpdatedTime(new Date());
+        getLastUpdatedTime();
         // console.log(boardData);
       })
       .catch((error) => window.alert("Loading Failed"));
-    setLastUpdatedTime(new Date());
   };
 
   useEffect(() => {
@@ -55,7 +56,7 @@ function Board() {
   useEffect(() => {
     const interval1 = setInterval(() => {
       getBoardData();
-    }, 1000 * 60 * 2);
+    }, 1000 * 60 * 5);
     return () => clearInterval(interval1);
   }, []);
 
