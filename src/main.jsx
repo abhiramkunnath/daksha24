@@ -16,7 +16,7 @@ export default function App() {
           <Route path="/" element={<Layout />}>
           <Route index element={<Landing />} />
           <Route path="/board" element={<Board />} />
-          {/* <Route path="/events" element={<Events />} /> */}
+          <Route path="/events" element={<Events />} />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
