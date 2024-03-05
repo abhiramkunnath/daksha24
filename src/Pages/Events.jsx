@@ -66,7 +66,7 @@ function Events() {
               <span className="eventStage" data-state={row.EventStage}>
                 Stage: {row.EventStage}
               </span>
-              <span className="eventStartTime">
+              <span className="eventStartTime" data-state={row.EventStart}>
                 Event Starts At {row.EventStart}
               </span>
               <span className="FirstWinner Winner" data-state={row.Winner1}>
