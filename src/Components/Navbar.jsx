@@ -6,10 +6,14 @@ import Logo from "../assets/daskaha24LogoWeb.png";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const toggleChecked = () => {
+  const toggleChecked = (isNavLink) => {
     setIsMenuOpen((value) => !value);
     const body = document.getElementById("root");
-    body.classList.toggle("menu--open");
+    if (!isNavLink) {
+      body.classList.toggle("menu--open");
+    } else {
+      body.classList.remove("menu--open");
+    }
   };
 
   return (
@@ -23,17 +27,17 @@ function Navbar() {
         <nav className={`nav--links ${isMenuOpen && "active"}`}>
           <ul>
             <li className="nav--link">
-              <NavLink onClick={toggleChecked} to="/">
+              <NavLink onClick={() => toggleChecked(true)} to="/">
                 Home
               </NavLink>
             </li>
             <li className="nav--link">
-              <NavLink onClick={toggleChecked} to="/events">
+              <NavLink onClick={() => toggleChecked(true)} to="/events">
                 Events
               </NavLink>
             </li>
             <li className="nav--link">
-              <NavLink onClick={toggleChecked} to="/board">
+              <NavLink onClick={() => toggleChecked(true)} to="/board">
                 Leader Board
               </NavLink>
             </li>
@@ -47,7 +51,7 @@ function Navbar() {
             className="menu-icon__cheeckbox"
             checked={isMenuOpen}
             onChange={() => {}}
-            onClick={toggleChecked}
+            onClick={() => toggleChecked(false)}
             type="checkbox"
           />
           <div>

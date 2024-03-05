@@ -7,6 +7,7 @@ import Layout from "./Pages/Layout";
 import Landing from "./Pages/Landing";
 import Board from "./Pages/Board";
 import NoPage from "./Pages/NoPage";
+import Events from "./Pages/Events";
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
           <Route path="/" element={<Layout />}>
           <Route index element={<Landing />} />
           <Route path="/board" element={<Board />} />
+          <Route path="/events" element={<Events />} />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>

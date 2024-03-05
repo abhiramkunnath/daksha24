@@ -1,0 +1,72 @@
+@import "../Variables.scss";
+
+.Landing {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  .Hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #000000;
+    background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/fs/2786a1100531849.5f0c9c33ee413.jpg");
+    background-repeat: no-repeat;
+    background-position: 60%;
+    background-size: cover;
+    overflow-x: hidden;
+    p {
+      margin-bottom: 16px;
+    }
+    .month{
+      margin-top: 16px;
+      margin-bottom: -8px;
+    }
+    img {
+      width: 500px;
+      object-fit: contain;
+      margin: 1rem 0;
+    }
+    h4 {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    h3 {
+      font-size: 3rem;
+      font-weight: bold;
+      color: red;
+    }
+    a{
+      margin-top: 24px;
+      padding: 0.6rem 1.6rem;
+      border: none;
+      border-radius: 3rem;
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: white;
+      text-shadow: 0 0 15px black;
+      background-color: transparent;
+      outline-offset: 4px;
+      outline: 1.5px solid rgba(255, 255, 255, 0.237);
+      transition: $transition1;
+
+      &:is(:hover, :focus) {
+        background-position: 60%;
+        outline: 1.5px solid rgb(255, 255, 255);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .Landing {
+    .Hero {
+      img {
+        width: 350px;
+      }
+    }
+  }
+}
