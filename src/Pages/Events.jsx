@@ -66,9 +66,15 @@ function Events() {
               <span className="eventStage" data-state={row.EventStage}>
                 Stage: {row.EventStage}
               </span>
-              <span className="eventStartTime">
-                Event Starts At {row.EventStart}
-              </span>
+              {row.EventState == "Result Announced" ? (
+                <span className="eventStartTime" data-state={row.EventStart}>
+                  Event Started At {row.EventStart}
+                </span>
+              ) : (
+                <span className="eventStartTime" data-state={row.EventStart}>
+                  Event Starts At {row.EventStart}
+                </span>
+              )}
               <span className="FirstWinner Winner" data-state={row.Winner1}>
                 First : {row.Winner1}
               </span>

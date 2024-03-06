@@ -52,11 +52,14 @@
     span[data-state="Result Announced"] {
       color: greenyellow;
     }
-    span[data-state="In Progress"] {
+    span[data-state="Postponed"] {
       color: yellow;
     }
     span[data-state="Cancelled"] {
       color: rgb(255, 99, 99);
+    }
+    span[data-state="Withheld"] {
+      color: rgb(124, 209, 255);
     }
 
     span[data-state=""]{
